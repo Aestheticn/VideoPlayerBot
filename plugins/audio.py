@@ -31,7 +31,7 @@ async def play(client, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, query)
         if match:
-            await msg.edit("🔄 `Starting YouTube Audio Stream ...`")
+            await msg.edit("🔄 `connecting to nir servers ...`")
             try:
                 meta = ydl.extract_info(query, download=False)
                 formats = meta.get('formats', [meta])
